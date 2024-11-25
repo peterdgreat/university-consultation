@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+# db/seeds.rb
+Plan.create!(name: 'Free', price: 0, features: 'Basic features')
+Plan.create!(name: 'Premium', price: 9.99, features: 'Advanced features')
