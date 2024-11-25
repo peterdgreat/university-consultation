@@ -1,0 +1,10 @@
+<h1>Available Plans</h1>
+
+<% @plans.each do |plan| %>
+  <div>
+    <h2><%= plan.name %></h2>
+    <p>Price: $<%= plan.price %></p>
+    <p>Features: <%= plan.features %></p>
+    <%= button_to "Subscribe", subscribe_plan_path(plan), method: :post %>
+  </div>
+<% end %>
