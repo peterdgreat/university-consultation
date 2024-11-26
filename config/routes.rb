@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'consultants/index'
+  get 'consultants/show'
+  get 'consultant_requests/create'
+  get 'consultant_requests/index'
+  get 'consultant_requests/approve'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root to: "home#index"
@@ -11,6 +16,15 @@ Rails.application.routes.draw do
       post :subscribe
     end
   end
+
+  resources :consultant_requests, only: [:create, :index] do
+    member do
+      patch :approve
+    end
+  end
+  resources :consultants, only: [:index, :show]
+
+
   # Defines the root path route ("/")
   # root "posts#index"
 end

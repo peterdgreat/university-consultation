@@ -1,0 +1,7 @@
+<h1>Consultants</h1>
+
+<% @consultants.each do |consultant| %>
+  <div>
+    <p><%= link_to consultant.email, consultant_path(consultant) %></p>
+  </div>
+<% end %>

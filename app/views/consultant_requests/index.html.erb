@@ -1,0 +1,8 @@
+<h1>Pending Consultant Requests</h1>
+
+<% @consultant_requests.each do |request| %>
+  <div>
+    <p><%= request.user.email %></p>
+    <%= button_to 'Approve', approve_consultant_request_path(request), method: :patch %>
+  </div>
+<% end %>
