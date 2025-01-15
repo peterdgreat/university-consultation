@@ -71,3 +71,6 @@ end
 gem "devise", "~> 4.9"
 
 gem "rolify", "~> 6.0"
+
+gem "bootstrap"
+gem "sassc-rails"
