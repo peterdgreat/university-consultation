@@ -1,0 +1,7 @@
+<h1><%= @consultant.email %></h1>
+
+<% if @consultant.calendly_link.present? %>
+  <p><%= link_to 'Book a Consultation', @consultant.calendly_link, target: '_blank' %></p>
+<% else %>
+  <p>This consultant has not provided a Calendly link.</p>
+<% end %>
