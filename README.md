@@ -4,6 +4,8 @@ This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
+* Something breaking to check later, Remember to set Environment to DEV to work with CSS 
+export RAILS_ENV=development
 
 * Ruby version
 
