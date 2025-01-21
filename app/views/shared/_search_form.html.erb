@@ -1,0 +1,18 @@
+<%= form_with url: schools_path, method: :get, class: "form-inline" do %>
+  <div class="form-group mb-2">
+    <label for="course_of_study" class="mr-2">Course of Study:</label>
+    <%= select_tag :course_of_study, options_for_select(['', 'Mathematics', 'Science', 'Arts']), class: "form-control" %>
+  </div>
+
+  <div class="form-group mb-2 mx-sm-3">
+    <label for="level_of_study" class="mr-2">Level of Study:</label>
+    <%= select_tag :level_of_study, options_for_select(['', 'Undergraduate', 'Postgraduate', 'Diploma']), class: "form-control" %>
+  </div>
+
+  <div class="form-group mb-2 mx-sm-3">
+    <label for="study_destination" class="mr-2">Study Destination:</label>
+    <%= select_tag :study_destination, options_for_select(['', 'USA', 'UK', 'Canada']), class: "form-control" %>
+  </div>
+
+  <%= button_tag 'Search', type: 'submit', class: "btn btn-primary mb-2" %>
+<% end %>
