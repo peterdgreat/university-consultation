@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :schools do
+    collection do
+      get :search
+    end
+  end
   get 'consultants/index'
   get 'consultants/show'
   get 'consultant_requests/create'
